@@ -1,0 +1,124 @@
+/* Performance-optimized CSS styles */
+
+/* Reduce paint complexity */
+.shadow-optimized {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* GPU-accelerated animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scrolling with performance */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reduce layout thrashing */
+.layout-stable {
+  contain: layout style paint;
+}
+
+/* Optimize images for performance */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Performance-optimized backdrop blur */
+.backdrop-optimized {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  .gpu-accelerated {
+    will-change: transform;
+  }
+  
+  .shadow-optimized {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-optimized {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High-performance gradients */
+.gradient-optimized {
+  background: linear-gradient(135deg, #1F8A8A 0%, #2563EB 50%, #22C55E 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Optimize for low-end devices */
+@media (max-width: 768px) and (max-height: 1024px) {
+  .hero-optimized {
+    min-height: 100vh;
+  }
+  
+  .text-optimized {
+    font-size: clamp(1rem, 4vw, 2rem);
+  }
+}
+
+/* Containment for better performance */
+.performance-optimized {
+  contain: strict;
+}
+
+/* Improve rendering performance */
+.render-optimized {
+  isolation: isolate;
+}
+
+/* Optimize button interactions */
+.button-optimized {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  will-change: transform, box-shadow;
+}
+
+.button-optimized:hover {
+  transform: translateY(-2px);
+}
+
+/* Optimize carousel animations */
+.carousel-optimized {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+/* Performance-optimized parallax */
+.parallax-optimized {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reduce repaints */
+.no-repaint {
+  contain: paint;
+}
+
+/* Optimize text rendering */
+.text-optimized {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
